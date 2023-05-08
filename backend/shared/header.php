@@ -12,6 +12,6 @@
         <title><?php echo $pageTitle; ?></title>
         <link rel="shortcut icon" type="image/x-icon" href="frontend/assets/favicon/twitter.ico">
         <link rel="stylesheet" href="frontend/assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="frontend/assets/css/style.css">
+        <link rel="stylesheet" href="frontend/assets/css/master.css">
     </head>
     <body> 

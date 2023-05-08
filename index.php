@@ -1,4 +1,5 @@
-<?php require_once 'backend/shared/header.php'; ?>
+<?php require_once "backend/initialize.php"; ?>
+<?php require_once "backend/shared/header.php"; ?>
         <section class="main-page">
             <div class="left">
                 <div class="left-content p-center">
@@ -37,7 +38,9 @@
                     <a href="#">Developers</a>
                     <a href="#">Directory</a>
                     <a href="#">Settings</a>
-                    <span href="#">&copy; <?php echo date('y'); ?> Twitter, Inc</span>
+                    <span href="#">&copy; <?php echo date(
+                      "y"
+                    ); ?> Twitter, Inc</span>
                 </nav>
             </footer>
         </section>
