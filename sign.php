@@ -1,3 +1,17 @@
+<?php
+require_once "backend/initialize.php";
+
+if (is_post_requested()) {
+  if (isset($_POST["firstName"]) && !empty($_POST["firstName"])) {
+    $fname = FormSanitizer::formSanitizerName($_POST["firstName"]);
+    $lname = FormSanitizer::formSanitizerName($_POST["lastName"]);
+    $email = FormSanitizer::formSanitizerString($_POST["email"]);
+    $password = FormSanitizer::formSanitizerString($_POST["password"]);
+    $cpassword = FormSanitizer::formSanitizerString($_POST["cpassword"]);
+  }
+}
+?>
+
 <?php $pageTitle = "SignUp | Twitter"; ?>
 <?php require_once "backend/shared/header.php"; ?>
 <section class="sign-container">
@@ -33,7 +47,7 @@
 					<input type="checkbox" class="form-checkbox" id="s-password" autocomplete="off" onclick="showPassword()">
 				</div>
 				<div class="form-btn-wrapper">
-					<button type="submit" class="btn-form">Signup</button>
+					<button type="submit" class="btn-form">Sign Up</button>
 					<input type="checkbox" class="form-checkbox" id="check" name="remember">
 					<label for="check">Remember me</label>
 				</div>
