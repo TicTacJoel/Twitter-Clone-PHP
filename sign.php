@@ -54,7 +54,7 @@ if (is_post_requested()) {
 			</form>
 		</div>
 		<footer class="form-footer">
-			<p>Already have an account <a href="login.php"">Log In</a></p>
+			<p>Already have an account <a href="login.php">Log In</a></p>
 		</footer>
 	</div>
 </section>

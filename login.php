@@ -28,7 +28,7 @@
 			</form>
 		</div>
 		<footer class="form-footer">
-			<p>New to Twitter? <a href="sign.php"">Sign up</a></p>
+			<p>New to Twitter? <a href="sign.php">Sign up</a></p>
 		</footer>
 	</div>
 </section>
