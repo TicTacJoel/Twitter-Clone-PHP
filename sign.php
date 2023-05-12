@@ -8,6 +8,18 @@ if (is_post_requested()) {
     $email = FormSanitizer::formSanitizerString($_POST["email"]);
     $password = FormSanitizer::formSanitizerString($_POST["password"]);
     $cpassword = FormSanitizer::formSanitizerString($_POST["cpassword"]);
+
+    $username = $account->generatesUsername($fname, $lname);
+    echo $username;
+
+    $account->register(
+      $fname,
+      $lname,
+      $username,
+      $email,
+      $password,
+      $cpassword
+    );
   }
 }
 ?>
@@ -23,10 +35,12 @@ if (is_post_requested()) {
 			</div>
 			<form action="sign.php" class="formField" method="POST">
 				<div class="form-group">
+					<?php echo $account->getErrorMessage(Constants::$firstNameCharacters); ?>
 					<label for="firstName">First Name</label>
 					<input type="text" name="firstName" id="firstName" autocomplete="off" required>
 				</div>
 				<div class="form-group">
+					<?php echo $account->getErrorMessage(Constants::$lastNameCharacters); ?>
 					<label for="lastName">Last Name</label>
 					<input type="text" name="lastName" id="lastName" autocomplete="off" required>
 				</div>
